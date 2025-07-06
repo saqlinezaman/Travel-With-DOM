@@ -1,42 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel With Dom</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body class=" bg-white">
-   <!-- header section  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-white">
+    <!-- header section  -->
 
-    <header class="bg-white flex justify-between items-center shadow-xl px-10 mb-5">
-        <div >
-            <img class=" w-24 h-16" src="./img/logo.png" alt="">
+    <header class="bg-white sticky top-0 z-50 flex justify-between items-center shadow-xl px-5 lg:px-10 py-3 mb-5">
+        <div>
+            <img class="w-24 h-16" src="./img/logo.png" alt="Logo" />
         </div>
-        <div class=" flex gap-8 items-center">
-            <div class="">
-                <i class="fa-solid fa-cart-shopping text-2xl text-red-600"></i><sup class="text-xl text-lime-800 font-extrabold">2</sup>
+        <div class="flex gap-5 lg:gap-8 items-center">
+            <div class="relative">
+            <i class="fa-solid fa-cart-shopping text-2xl text-red-600"></i>
+            <sup id="card-count" class="absolute -top-2 -right-3 text-sm bg-lime-700 text-white font-bold px-2 py-0.5 rounded-full">0</sup>
             </div>
-            <img class="w-10 h-10" src="./img/profile.png" alt="">
+            <img class="w-10 h-10 rounded-full" src="./img/profile.png" alt="Profile" />
         </div>
     </header>
 
+
     <!-- header section end  -->
-     <main class="bg-white lg:mx-24 mx-2">
-        <div class=" lg:flex justify-between items-center shadow-md rounded-lg">
-            <!-- text -->
-            <div class="lg:w-1/2 lg:pl-10 text-center lg:text-start mb-5">
-                <h1 class="lg:text-7xl text-4xl text-black font-bold mb-5">Let's Travel, enjoy and live a new and full life</h1>
-                <p class="text-lg text-gray-500 font-medium mb-10">Built Wicket longer admire do barton vanity itself do in it.<br>Preferred to sportsmen it engrossed listening. Park gate <br>sell they west hard for the.</p>
-                <h2 class="lg:text-4xl text-3xl text-lime-500 font-semibold">Your Budget is : <span class="text-red-600 font-bold">2000</span> $</h2>
-            </div>
-            <!-- img -->
-            <div class="lg:w-1-2 bg-[url(/img/Decore.png)] bg-no-repeat">
-                <img class="w-full h-[88vh] object-cover lg:p-10" src="./img/banner.png" alt="">
-            </div>
+    <main class="bg-white lg:mx-24 mx-2">
+      <!-- bannare section start -->
+      <div class="lg:flex justify-between items-center shadow-md rounded-lg">
+        <!-- text -->
+        <div class="lg:w-1/2 lg:pl-10 text-center lg:text-start mb-5">
+          <h1 class="lg:text-7xl text-4xl text-black font-bold mb-5">
+            Let's Travel, enjoy and live a new and full life
+          </h1>
+          <p class="text-lg text-gray-500 font-medium mb-10">
+            Built Wicket longer admire do barton vanity itself do in it.<br />Preferred
+            to sportsmen it engrossed listening. Park gate <br />sell they west
+            hard for the.
+          </p>
+          <h2 class="lg:text-4xl text-3xl text-lime-500 font-semibold">
+            Your Budget is : <span class="text-red-600 font-bold">2000</span> $
+          </h2>
         </div>
-     </main>
-</body>
+        <!-- img -->
+        <div class="lg:w-1-2 bg-[url(/img/Decore.png)] bg-no-repeat">
+          <img
+            class="w-full h-[88vh] object-cover lg:p-10"
+            src="./img/banner.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- bannare section end -->
+
+      <!-- card and show output section -->
+      <section class="lg:my-12 my-8 px-4 lg:px-0">
+        <div class="flex flex-col lg:flex-row justify-center gap-8">
+          <!-- Left Column: Cards -->
+          <div class="lg:w-7/12 w-full">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-8">
+              <!-- Card 1 -->
+
+              <div class="card bg-base-100 shadow-sm w-full">
+                <figure class="p-3">
+                  <img
+                    src="./img/sajek.jpeg"
+                    alt="Shoes"
+                    class="rounded-xl w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-start">
+                  <h2 class="card-title text-3xl font-bold text-blue-950">
+                    Sajek Vally
+                  </h2>
+                  <p class="text-xl font-semibold text-black">
+                    Cost <span class="text-red-800 font-extrabold">300</span> $
+                  </p>
+                  <div class="card-actions w-full mt-5">
+                    <button  class="btn btn-success w-full card-btn">Add To Cart</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2 -->
+
+              <div class="card bg-base-100 shadow-sm w-full">
+                <figure class="p-3">
+                  <img
+                    src="./img/coxBazar.jpeg"
+                    alt="Shoes"
+                    class="rounded-xl w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-start">
+                  <h2 class="card-title text-3xl font-bold text-blue-950">
+                    Cox Bazar
+                  </h2>
+                  <p class="text-xl font-semibold text-black">
+                    Cost <span class="text-red-800 font-extrabold">300</span> $
+                  </p>
+                  <div class="card-actions w-full mt-5">
+                    <button  class="btn btn-success w-full card-btn">Add To Cart</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+
+              <div class="card bg-base-100 shadow-sm w-full">
+                <figure class="p-3">
+                  <img
+                    src="./img/sundoeban.jpeg"
+                    alt="Shoes"
+                    class="rounded-xl w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-start">
+                  <h2 class="card-title text-3xl font-bold text-blue-950">
+                    Sundorban
+                  </h2>
+                  <p class="text-xl font-semibold text-black">
+                    Cost <span class="text-red-800 font-extrabold">300</span> $
+                  </p>
+                  <div class="card-actions w-full mt-5">
+                    <button  class="btn btn-success w-full card-btn">Add To Cart</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 4 -->
+
+              <div class="card bg-base-100 shadow-sm w-full">
+                <figure class="p-3">
+                  <img
+                    src="./img/sylhet.jpeg"
+                    alt="Shoes"
+                    class="rounded-xl w-full h-56"
+                  />
+                </figure>
+                <div class="card-body items-start">
+                  <h2 class="card-title text-3xl font-bold text-blue-950">
+                    Sylhet
+                  </h2>
+                  <p class="text-xl font-semibold text-black">
+                    Cost <span class="text-red-800 font-extrabold">300</span> $
+                  </p>
+                  <div class="card-actions w-full mt-5">
+                    <button class="btn btn-success w-full card-btn">Add To Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="lg:w-5/12 w-full">
+            <div class="card bg-base-100 shadow-sm">
+              <div class="card-body text-center">
+                <h2 class="text-center text-4xl text-black font-semibold">Cart</h2>
+                 <div class="divider divider-accent"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- js link -->
+     <script src="./js/app.js"></script>
+  </body>
 </html>
