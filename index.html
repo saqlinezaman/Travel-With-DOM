@@ -66,6 +66,7 @@
 
       <!-- card and show output section -->
       <section class="lg:my-12 my-8 px-4 lg:px-0">
+        <h1 class="text-center text-5xl text-black font-bold my-6">Our Popular Places For tour</h1>
         <div class="flex flex-col lg:flex-row justify-center gap-8">
           <!-- Left Column: Cards -->
           <div class="lg:w-7/12 w-full">
@@ -151,7 +152,7 @@
                     Sylhet
                   </h2>
                   <p class="text-xl font-semibold text-black">
-                    Cost <span class="text-red-800 font-extrabold">300</span> $
+                    Cost <span class="text-red-800 font-extrabold">500</span> $
                   </p>
                   <div class="card-actions w-full mt-5">
                     <button class="btn btn-success w-full card-btn">Add To Cart</button>
@@ -164,9 +165,24 @@
           <!-- Right Column -->
           <div class="lg:w-5/12 w-full">
             <div class="card bg-base-100 shadow-sm">
-              <div class="card-body text-center">
+              <div class="card-body">
                 <h2 class="text-center text-4xl text-black font-semibold">Cart</h2>
+                <div class="flex gap-5 justify-center mt-6">
+                    <button class="btn btn-soft btn-primary">Bus +100</button>
+                    <button class="btn btn-soft btn-secondary">Train -100</button>
+                    <button class="btn btn-soft btn-accent">Flight +500</button>
+                </div>
                  <div class="divider divider-accent"></div>
+                 <div class="flex lg:space-x-28 space-x-12 items-center">
+                     <h2 id="place-name" class="text-lime-700 text-xl font-semibold"></h2>
+                     <p id="price" class="text-black text-lg font-bold">Price</p>
+                 </div>
+                 <div class="divider divider-primary"></div>
+                 <div class="flex lg:space-x-28 space-x-12 items-center">
+                    <h2 id="grandTotal" class="text-blue-700 text-xl font-semibold">Grand Total:</h2>
+                     <p id="Grandprice" class="text-red-700 text-lg font-bold">Grand Price</p>
+
+                 </div>
             </div>
           </div>
         </div>
